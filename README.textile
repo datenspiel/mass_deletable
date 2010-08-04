@@ -1,0 +1,15 @@
+h2. MassDeletable
+
+
+A very,very tiny plugin to mass delete a ActiveRecord Collection. Used within a Flex On Rails Project. Not a biggie.
+
+
+h2.Example
+
+<ode>
+Product.mass_destroy(:bunch => params[:products_collection])
+</code>
+
+It supports a collection of Fixnums or ActiveRecord models.
+
+Copyright (c) 2010 Daniel Schmidt Datenspiel GmbH, released under the MIT license
