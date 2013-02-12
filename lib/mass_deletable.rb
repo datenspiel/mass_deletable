@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module MassDeletable
   
   def self.included(base)
@@ -22,6 +23,8 @@ module MassDeletable
           bunches[index] = id.to_i
         end
         opt[:bunch] = bunches
+      elsif opt[:bunch].is_a?(String)
+        opt[:bunch] = [opt[:bunch].to_i]
       end
       opt[:bunch].each do |item|
         if(item.kind_of?(ActiveRecord::Base))
